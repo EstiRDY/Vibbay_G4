@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vibbay - Registro</title>
+		<!-- Nuestro propio CSS-->
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<!--Importando JQuery antes que Materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<!--Añadiendo MaterializeCSS-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  	    <!--definicion del charset para aceptar la letra ñ-->
+  	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<!--Logotipo-->
+		<div class="row">
+			<div class="col m8 l6 offset-m2 offset-l3 hide-on-small-only">
+				<div class="center-align">
+					<img width="70%" src="img/logo.png" >
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col s7 m6 l4 offset-s3 offset-m3 offset-l4">
+				<div class="card-panel white z-depth-5 ">
+					<div class="card-content black-text">
+					 	<form>
+							<!--Text de email-->
+							<div class="row">
+								<div class="input-field">
+									<i class="material-icons prefix">account_circle</i>
+									<input id="icon_prefix" type="email" class="validate" placeholder="tucorreo@email.com" required>
+									<label for="icon_prefix" class="active">Usuario</label>
+						        </div>
+						    </div>
+						    <!--Text de contraseña-->
+							<div class="row">
+						      	<div class="input-field">
+									<i class="material-icons prefix">vpn_key</i>
+									<input id="icon_telephone" type="password" class="validate" placeholder="********" required>
+									<label for="icon_telephone" class="active">Contraseña</label>
+						        </div>
+						    </div>
+						    <!--Boton de entrar-->
+						    <div class="row">
+						    		<div class="col s8 m9 l6 offset-s2 offset-m2 offset-l3">
+										<div class="valign-wrapper">
+											<button class="btn waves-effect waves-light valign-center" type="submit" name="action">Entrar <i class="material-icons right">send</i>
+											</button>
+										</div>
+						    		</div>
+						    </div>
+						    <!--Opciones-->
+						    <div class="row">
+					    		<ul>
+					    			<a href=""><li>¿Has olvidado tu contraseña?</li></a>
+					    			<a href=""><li>Registrar una cuenta nueva</li></a>
+					    		</ul>
+						    </div>		
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

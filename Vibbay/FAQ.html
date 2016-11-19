@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!-- MaterializeCSS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>   
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Buda:300|Cabin+Sketch|Dosis|Josefin+Sans|Neucha" rel="stylesheet">
+        <!--CSS local-->
+        <link href="css/FAQCss.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/cssGlobal.css">
+        <!--Declaracion de codigo comun --> 
+        <script src="js/codigoComun.js"></script>
+        <title>Vibbay - FAQ</title>
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/V_redonda_transparencia.png"/>
+        <meta charset="utf-8"> 
+    </head>
+    <body>
+            <!--CABECERA-->
+            <script type="text/javascript">callNavBar();</script> 
+        <!--<nav>
+	 	<div class="nav-wrapper">
+	      <a href="#!" class="brand-logo">Vibbay</a>
+	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	      <ul class="right hide-on-med-and-down">
+	        <li><a href="#!">Tienda</a></li>
+	        <li><a href="#!">Ayuda</a></li>
+	        <li><a href="#!">Registro</a></li>
+	        <li><a class="waves-effect waves-light btn">Login</a></li>
+	         <!--<li><a class="waves-effect waves-light btn"><i class="material-icons">person</i></a></li>-->
+	      <!--</ul>
+	      <ul class="side-nav" id="mobile-demo">
+	        <li><a href="#!">Sass</a></li>
+	        <li><a href="#!">Components</a></li>
+	        <li><a href="#!">Javascript</a></li>
+	        <li><a href="#!">Mobile</a></li>
+	      </ul>
+	    </div>
+	  </nav> -->
+       
+       
+        <!--Panel acordeon-->
+        <div id="PanelDesplegable">
+            <div class="row">
+            <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3">
+        <ul class="collapsible" data-collapsible="accordion">
+            <!--Pregunta1-->
+            <li>
+                                                                        <!--Icono----Pregunta---->
+                <div class="collapsible-header"><i class="material-icons">replay</i>Necesito retirar una puja</div>
+                                                <!------Respuesta-------->
+                <div class="collapsible-body"><p>Dentro de las opciones de tu cuenta, podrás acceder a los artículos que tienes en subasta y retirarlos desde allí.</p></div>
+            </li>
+            <!--Pregunta2-->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">not_interested</i>Cancelación de una compra</div>
+                <div class="collapsible-body"><p>En caso de querer una devolución, tendrás que ponerte en contacto con el vendedor, nosotros solo somos los intermediarios.</p></div>
+            </li>
+            <!--Pregunta3-->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">credit_card</i>Comisiones, tarifas y facturas</div>
+                <div class="collapsible-body"><p>El método de pago se realiza por tarjeta de crédito, los usuarios usaran el método de envió que más les convenga.</p></div>
+            </li>
+            <!--Pregunta4-->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">assignment_late</i>Qué hacer en caso de artículo no pagado</div>
+                <div class="collapsible-body"><p>En caso de artículo no pagado, póngase en contacto con nosotros y le ayudaremos a solucionar el problema.</p></div>
+            </li>
+            <!--Pregunta5-->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">contact_phone</i>Informar sobre infracción de normas de artículos o anuncios </div>
+                <div class="collapsible-body"><p>En caso de que presencie algo así, póngase en contacto con nosotros y le ayudaremos a solucionar el problema..</p></div>
+            </li>
+            <!--Pregunta6-->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">vpn_key</i>Contraseña de Vibbay olvidada</div>
+                <div class="collapsible-body"><p>Una contraseña nueva le será enviada una vez complete los datos de “¿Olvido su contraseña?”</p></div>
+            </li>
+            <!--Pregunta7-->
+            <li>
+                <div class="collapsible-header"><i class="material-icons">settings</i>Cómo actualizar la información de tu cuenta</div>
+                <div class="collapsible-body"><p>Podra hacerlo desde las opciones de su cuenta.</p></div>
+            </li>
+        </ul>
+        </div>
+            </div>
+        </div>
+        <script type="text/javascript">callFooter();</script> 
+        <script type="text/javascript">
+            $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+                                        });
+                                        });
+        </script>    
+    </body>
+    <!--FOOTER-->
+    <!--<footer class="page-footer">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col s12 l6">
+                    <h5 class="white-text">¿Quiénes somos?</h5>
+                    <p class="grey-text text-lighten-4">Una aplicación de compraventa de artículos por medio de subastas hecha por estudiantes de ingeniería informática. Esperamos sacar muy buena nota. No es broma.</p>
+                </div>
+
+                <ul class="col s6 l3">
+                    <li><i class="material-icons">mail</i><a href="mailto:soporte@vibbay.es"> soporte@vibbay.es</a></li>
+                    <br>
+                    <li><i class="material-icons">code</i> github/loquesea</li> 
+
+                </ul>
+
+                <ul class="col s6 l3">
+                    <li><i class="material-icons">mail</i> soporte@vibbay.es</li>
+                    <br>
+                    <li><i class="material-icons">mail</i> cosas</li> 
+
+                </ul>
+
+            </div>
+
+            <div class="col l4 offset-12 s12">
+                <h5 class="white-text">Mapa del sitio</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">F.A.Q</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Ayuda</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Noséqué</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Nosecuantos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 ADSI - UPV/EHU
+            </div>
+        </div>
+
+    </footer>-->
+</html>

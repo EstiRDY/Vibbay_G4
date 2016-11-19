@@ -1,0 +1,188 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-oct-2016, 15:47:49
+    Author     : Miguel
+*/
+
+body{
+    background-color: #42a5f5;/*COLOR DE FONDO DE LA PANTALLA*/
+}
+div.collapsible-body{
+    background-color: #e3f2fd;/*COLOR DE FONDO DE LA RESPUESTA*/
+}
+div.collapsible-header{
+    background-color: white;/*COLOR DE FONDO DE LA PREGUNTA*/
+}
+
+/*CABECERA*/
+nav{ 
+    width:100%;
+    background: #FC7854;/*Color de la cabecera*/
+    font-family: 'Cabin Sketch', cursive; 
+
+}
+nav .brand-logo {
+	margin-left: 20px;
+}
+nav ul li {color: #6150CE;}/*Color del Login*/
+
+/*PARALLAX*/
+.row.container{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.row.container h2 {
+	font-family: 'Cabin Sketch', cursive; 
+}
+
+.parallax-container {
+      height: 400px;
+    }
+
+.second-row-container{
+	text-align: right;
+}
+.row.container .prueba-izq {
+	display: inline-block;
+	vertical-align: middle;
+	/*width: 25%;*/
+	margin-right:80px;
+	text-align: center;
+} 	
+	.row.container .prueba-izq .material-icons{
+		color: white ;
+		background-color: #FC7854;
+		font-size: 90px;
+		position: relative;
+		top:3px;
+		text-align: center;
+		border-radius: 100%;
+		width: 1.15em;
+		height: 1.15em;
+		line-height: 1.15em;
+		display: inline-block;
+		box-shadow: 0 0 0 7px white, 
+					0 0 0 8px #e0e0e0;
+	}
+
+	.row.container .prueba-izq p{
+		position: relative;
+		text-align: justify;
+
+	}
+
+
+.row.container .prueba-centro {
+	display: inline-block;
+	vertical-align: top;
+	/*width: 25%;*/
+	margin-right:80px;
+	text-align: center;
+} 	
+	.row.container .prueba-centro .material-icons{
+		color: black;
+		background-color: #FC7854;
+		font-size: 90px;
+		position: relative;
+		top:3px;
+		text-align: center;
+		border-radius: 100%;
+		width: 1.15em;
+		height: 1.15em;
+		line-height: 1.15em;
+		display: inline-block;
+		box-shadow: 0 0 0 7px black, 
+					0 0 0 8px #e0e0e0;
+	
+
+	}
+
+	.row.container .prueba-centro p{
+		position: relative;
+		text-align: justify;
+	}
+
+.row.container .prueba-dch {
+	display: inline-block;
+	vertical-align: top;
+	/*width: 25%;*/
+	margin-right:80px;
+	text-align: center;
+} 	
+	.row.container .prueba-dch .material-icons{
+		color: white;
+		background-color: #FC7854;
+		font-size: 90px;
+		position: relative;
+		top:3px;
+		text-align: center;
+		/*border-radius: 100%;*/
+		width: 1.15em;
+		height: 1.15em;
+		line-height: 1.15em;
+		display: inline-block;
+		box-shadow: 0 0 0 7px white, 
+					0 0 0 8px #e0e0e0;
+
+
+	}
+
+	.row.container .prueba-dch p{
+		position: relative;
+		text-align: justify;
+	}
+
+	.second-row-container .row.container .cajapremio {
+		position: relative;
+		text-align: left;
+
+	}
+
+	.second-row-container .row.container .cajapremio img{
+		position: relative;
+		float: left;
+		vertical-align: middle;
+		margin: 0px 15px 15px 0px;
+	}
+/*Footer*/
+
+.page-footer {
+    background-color: lightgreen !important;
+    width: 100%;
+}
+
+
+.page-footer .container .row .material-icons{
+    color: white;
+    background-color: #FC7854;
+    font-size: 25px;
+    position: relative;
+    /*top:3px;*/
+    border-radius: 100%;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.15em;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 0 1px white, 
+        0 0 0 1px #e0e0e0;
+
+    vertical-align: middle;
+    margin: 0px 10px 10px 0px;
+}
+
+.page-footer .container .row li{
+    color: white;
+    position: relative;
+    text-align: left;
+}
+.page-footer .container .row li a{
+    color: white;
+    position: relative;
+    text-align: left;
+}
+.footer-copyright .container{margin-left: 10px;}

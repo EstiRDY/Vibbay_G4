@@ -1,0 +1,32 @@
+body {
+	background-color: lightblue;
+}
+
+.logotipoLogin{
+	position: absolute;
+	top: 8%;
+	left: 37%;
+	height: 20%; /*Ancho*/
+}
+
+.cuadroLogin{
+	/*margin-top: 10px;*/
+	position: absolute;
+	width: 20%;  /*ancho*/
+	height: 35%; /*alto*/
+	
+	background: white;
+
+	/*posicion*/
+	left: 40%;
+	top: 35%;
+}
+
+.card-panel{
+	border-radius: 25px 25px 25px 25px !important;
+
+}
+ul {
+	font-size: 12px;
+	list-style: none;
+}

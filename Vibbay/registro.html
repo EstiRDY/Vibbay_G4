@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vibbay - Registro</title>
+		<!-- Nuestro propio CSS-->
+		<link rel="stylesheet" type="text/css" href="css/registro.css">
+		<!--Importando JQuery antes que Materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<!--Añadiendo MaterializeCSS-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	    <!--definicion del charset para aceptar la letra ñ-->
+  	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<!--Logotipo-->
+		<div class="row">
+			<div class="col m8 l6 offset-m2 offset-l3 hide-on-small-only">
+				<div class="center-align">
+					<img width="70%" src="img/logo.png" >
+				</div>
+			</div>
+		</div>
+
+	<!-- formulario de registro-->
+		<div class="row">
+			<div class="col s7 m7 l6 offset-s3 offset-m3 offset-l3">
+				<div class="card-panel z-depth-5">
+					<div class="card-content black-text left-align">
+						<form>
+							<!--Text de Nombre y apellidos-->
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix">account_circle</i>
+									<input id="tNombreUsuario" type="text" class="validate" required>
+									<label for="tNombreUsuario">Nombre y Apellidos</label>
+								</div>
+						    </div>
+						    <!--Text de DNI-->
+							<div class="row">
+						      <div class="input-field col s12">
+									<i class="material-icons prefix">assignment_ind</i>
+									<input id="tDNI" type="text" class="validate" onblur="comprobacionDNI()" required>
+									<label id="lbDNI" for="tDNI" class="active">DNI (00000000X)</label>
+									<!--<label id="regError">00</label>-->
+						     </div>
+						    </div>
+						    <!--Text de Correo-->
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix">email</i>
+									<input id="icon_prefix" type="email" class="validate" required>
+									<label for="icon_prefix" data-error="El dato introducido no es un email valido" class="active">Correo electronico</label>
+						       </div>
+						    </div>
+						    <!--Text de Password 1-->
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix">vpn_key</i>
+									<input id="password" type="password" class="validate" onblur="limiteCaracteres()" required>
+									<label for="password" class="active">Contraseña</label>
+						       </div>
+						    </div>
+						    <!--Text de Password 1-->
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix">vpn_key</i>
+									<input id="password2" type="password" class="validate" onblur="comprobacionMismaContraseña()" required>
+									<label for="password2" class="active">Repita contraseña</label>
+						        </div>
+						    </div>
+						    <!--Text de Nickname-->
+							<div class="row">
+								<div class="input-field col s12">
+									<i class="material-icons prefix">perm_identity</i>
+									<input id="nickname" type="text" class="validate" required>
+									<label for="nickname" class="active">Nickname</label>
+						      	</div>
+						    </div> 
+						    <!--Checkbox de Terminos y condiciones-->
+							<div class="row">
+								<div class="input-field col s12">
+									<input type="checkbox" id="test5" required />
+									<label for="test5">Acepto los términos y condiciones de Vibbay</label>
+						       </div>
+						    </div> 
+						    <!--Boton de entrar-->
+						    <div class="row">
+						    	<div class="col s8 m9 l6 offset-s2 offset-m3 offset-l4">
+						    		<button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+										<i class="material-icons right">send</i>
+									</button>
+						    	</div>
+						    </div>
+						    <!--Opciones-->
+						    <!--
+						    <div class="row">
+						    	<div class="col s12">
+						    		<ul>
+						    			<a href=""><li>¿Has olvidado tu contraseña?</li></a>
+						    			<a href=""><li>No tengo una cuenta, quiero registrarme</li></a>
+						    		</ul>
+						    	</div>
+						    </div>	
+						    -->	
+						</form>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		//REQUISITO FUNCIONAL: COMPROBACION DE DNI BIEN ESCRITO, LETRA INCLUIDA
+			function comprobacionDNI()
+			{
+				var dni = document.getElementById("tDNI").value.toUpperCase();
+			//	dni = dni.toUpperCase();
+				document.getElementById("tDNI").value = dni;
+				var exreg = new RegExp("[0-9]{7}[A-Z]");
+				var letraDNI = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];	
+				if ( exreg.test(dni) == false)
+				{ //Si la sintaxis de DNI esta mal puesta...
+					//alert("DNI mal introducido");
+					Materialize.toast('El DNI no cumple la regla de 7 números y una letra', 4000);
+					document.getElementById("tDNI").value = "";
+					//document.getElementById("lbDNI").setAttribute('data-error','el DNI no cumple la regla de 7 números y una letra');
+				//	document.getElementById("regError").innerHTML = "Error";
+				}
+				else 
+				{
+				//Si no, calculo la letra del DNI y compruebo si es correcta
+					var num = dni.replace(dni.charAt(8),"");
+					var mod = num % 23;
+					if (letraDNI[mod] != dni.charAt(8)) 
+					{
+						//alert("El DNI introducido no es correcto");
+						Materialize.toast('El DNI introducido no es correcto', 4000);
+						document.getElementById("tDNI").value = "";
+					}
+				}
+			}	
+
+			//REQUISITO FUNCIONAL: EL LIMITE DE CARACTERES DE LA CONTRASEÑA DEBE SER MINIMO 3
+			function limiteCaracteres() {
+				var pass = document.getElementById("password").value;
+				if (pass.length < 3 )
+				{
+					//alert("La contraseña debe tener al menos 3 caracteres");
+					Materialize.toast('La contraseña debe tener al menos 3 caracteres', 4000);
+					document.getElementById("password").value = "";
+				}
+
+			}
+
+			//COMPRUEBA QUE LAS DOS CONTRASEÑAS INTRODUCIDAS EN LOS TEXTBOX SEAN IDENTICAS
+			function comprobacionMismaContraseña(){
+				var pass = document.getElementById("password").value;
+				var pass2 = document.getElementById("password2").value;
+
+				if (pass != pass2)
+				{
+					//alert("Las contraseñas no coinciden, vuelva a introducirlas");
+					Materialize.toast('Las contraseñas no coinciden, vuelva a introducirlas', 4000);
+					document.getElementById("password").value = "";
+					document.getElementById("password2").value = "";
+				}
+
+			}
+
+
+		</script>
+	</body>
+
+
+</html>
